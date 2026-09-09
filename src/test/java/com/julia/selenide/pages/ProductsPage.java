@@ -79,6 +79,7 @@ public class ProductsPage {
     public void clickOnBtnAddToCartByName(String name) {
         SelenideElement card = getProductCardByName(name);
         card.$x(".//button").click();
+        card.$x(".//button").shouldHave(text("Remove"));
     }
 
     public String getProductButtonText(String name) {
