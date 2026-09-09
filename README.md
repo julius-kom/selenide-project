@@ -26,6 +26,12 @@ The project currently covers:
 - Checkout validation errors
 - Logout
 
+## Test Environment
+
+Tests run against the public SauceDemo test website.
+
+The credentials used in the tests are public test credentials provided by SauceDemo and do not contain any sensitive data.
+
 ## Project Structure
 
 - `pages` — Page Object classes
