@@ -19,8 +19,14 @@ public class ProductsPage {
     private ElementsCollection productPrices =  $$x("//div[@data-test='inventory-item-price']");
     private SelenideElement dropdown = $x("//select[@data-test='product-sort-container']");
     private SelenideElement cart = $x("//a[@data-test='shopping-cart-link']");
+    private SelenideElement cartBadge = $x("//*[@data-test='shopping-cart-badge']");
     private SelenideElement burgerMenuButton = $x("//div[@class='bm-burger-button']");
     private SelenideElement logoutButton = $x("//a[@data-test='logout-sidebar-link']");
+
+    @Step("Check cart badge displays {expectedCount}")
+    public void checkCartBadge(String expectedCount) {
+        cartBadge.shouldHave(exactText(expectedCount));
+    }
 
     @Step("Check that Product page is opened")
     public ProductsPage checkHeaderIsVisible(){
